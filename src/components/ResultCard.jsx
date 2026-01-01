@@ -1,6 +1,15 @@
 import React from 'react'
 
 const ResultCard = ({item}) => {
+
+    const addToCollection=(item) => {
+        const oldData=JSON.parse(localStorage.getItem('collection')) || []
+
+        const newData=[...oldData,item]
+        localStorage.setItem('collection',JSON.stringify(newData))
+        
+        
+    }
   return (
     <div className='w-[28vw] relative h-55 bg-red-500 rounded-xl overflow-hidden'>
        <a target='_blank' className='h-full' href={item.url}>
@@ -10,7 +19,13 @@ const ResultCard = ({item}) => {
        </a>
         <div id='bottom' className='flex justify-between items-center gap-2  w-full p-6 absolute bottom-0 text-white'>
             <h2 className='text-lg font-medium capitalize h-14 overflow-hidden'>{item.title}</h2>
-            <button className='bg-indigo-600 active:scale-95 cursor-pointer text-white rounded px-2'>Save</button>
+            <button onClick={() => {
+                addToCollection(item)
+            }}
+            className='bg-indigo-600 active:scale-95 cursor-pointer text-white rounded px-2'
+            >
+                Save
+            </button>
         </div>
     
     </div>
