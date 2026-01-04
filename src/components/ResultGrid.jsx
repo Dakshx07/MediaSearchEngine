@@ -21,6 +21,7 @@ const ResultGrid = () => {
             if(activeTab == 'photos'){
                 let response=await fetchPhotos(query)
                 //NORMALIZATION OD DATA USING MAP
+                
                 data=response.results.map((item)=>({
                     id:item.id,
                     type:'photo',
@@ -48,7 +49,7 @@ const ResultGrid = () => {
                 data=response.data.results.map((item)=>({
                     id:item.id,
                     type:'GIF',
-                    title:item.title || 'GIF',
+                    title:item.content_description || 'GIF',
                     thumbnail:item.media_formats.tinygif.url,
                     src:item.media_formats.gif.url,
                     url:item.url

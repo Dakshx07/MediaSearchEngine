@@ -5,12 +5,15 @@ import App from './App.jsx'
 import { Provider } from 'react-redux'
 import {store} from './redux/store.js'
 import {BrowserRouter} from 'react-router-dom'
+import Stairs from './Loader/Stairs.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
    <Provider store={store}>
     <BrowserRouter>
-      <App />
+     <Stairs>
+        <App />
+      </Stairs>
     </BrowserRouter>
    </Provider>
   </StrictMode>,
