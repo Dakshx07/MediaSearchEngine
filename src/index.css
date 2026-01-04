@@ -4,13 +4,26 @@
     background: linear-gradient(transparent,black);
 }
 
-*{
-    font-family: 'helvetica neue';
+@font-face {
+    font-family: inter;
+    src: url(../public/Inter-Italic-VariableFont_opsz\,wght.ttf);
+}
+@font-face {
+    font-family: poppins;
+    src: url(../public/Poppins-Black.ttf);
+}
+@font-face {
+    font-family: regular;
+    src: url(../public/Inter_24pt-Regular.ttf);
 }
 
+
+/* *{
+    font-family: 'helvetica neue';
+} */
+
 :root{
-    --c1:rgb(15, 40, 84);
-   --c2:rgb(28, 77, 141);
-   --c3:rgb(73, 136, 196);
-   --c4:rgb(189, 232, 245)
+    --c1:oklch(51.1% 0.262 276.966);
+   --c2:#F7F8FC;
+   --c3:rgba(99,102,241,0.4);
 }

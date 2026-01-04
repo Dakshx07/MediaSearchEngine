@@ -8,7 +8,7 @@ const App = () => {
 
  
   return (
-    <div className='min-h-screen text-white w-screen bg-gray-950 '>
+    <div className='min-h-screen text-white w-screen bg-[#0B0F1A] '>
       <NavBar />
      <Routes>
       <Route path="/" element={<HomePags />}/>
